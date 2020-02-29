@@ -42,3 +42,7 @@ func newConfiguration(properties *properties) *configuration {
 func init() {
 	app.Register(newConfiguration, new(properties))
 }
+
+func (c *configuration) Health(configurableFactory factory.ConfigurableFactory)  *healthController {
+	return newHealthController(configurableFactory)
+}

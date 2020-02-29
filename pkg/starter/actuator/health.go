@@ -40,10 +40,6 @@ type healthController struct {
 	configurableFactory factory.ConfigurableFactory
 }
 
-func init() {
-	app.Register(newHealthController)
-}
-
 func newHealthController(configurableFactory factory.ConfigurableFactory) *healthController {
 	return &healthController{configurableFactory: configurableFactory}
 }
