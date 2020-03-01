@@ -16,16 +16,18 @@ package main
 
 import (
 	"hidevops.io/hiboot/examples/cli/advanced/cmd"
-	"hidevops.io/hiboot/examples/cli/advanced/config"
+	"hidevops.io/hiboot/examples/cli/advanced/configure"
 	"hidevops.io/hiboot/pkg/app"
 	"hidevops.io/hiboot/pkg/app/cli"
 	"hidevops.io/hiboot/pkg/starter/logging"
 )
 
 func main() {
+
 	// create new cli application and run it
 	cli.NewApplication(cmd.NewRootCommand).
-		SetProperty(logging.Level, logging.LevelWarn).
-		SetProperty(app.ProfilesInclude, config.Profile).
+		SetProperty(app.BannerDisabled, true).
+		SetProperty(logging.Level, logging.LevelInfo).
+		SetProperty(app.ProfilesInclude, configure.Profile).
 		Run()
 }
