@@ -1,4 +1,4 @@
-package configure
+package config
 
 import (
 	"hidevops.io/hiboot/examples/cli/advanced/model"
@@ -6,7 +6,7 @@ import (
 )
 
 // Profile is the configuration name
-const Profile = "configure"
+const Profile = "config"
 
 type configuration struct {
 	app.Configuration

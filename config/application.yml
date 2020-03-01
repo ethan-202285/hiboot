@@ -4,6 +4,9 @@
 app:
   project: hidevopsio
   name: hiboot
+  profiles:
+    include:
+      - config
 
 logging:
   level: info
