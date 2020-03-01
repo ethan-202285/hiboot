@@ -16,7 +16,6 @@
 package actuator
 
 import (
-	"hidevops.io/hiboot/pkg/app"
 	"hidevops.io/hiboot/pkg/at"
 	"hidevops.io/hiboot/pkg/factory"
 )
